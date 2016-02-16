@@ -1,0 +1,27 @@
+﻿@using System.Web.Optimization
+
+@model dynamic
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <link href='@Styles.Url("~/bundles/bootstrap")' rel="stylesheet" />
+
+</head>
+<body ng-controller="Main as vm">
+<form class="form-inline">
+    <div class="form-group">
+        <label for="food">Food:</label>
+        <input id="food" type="text" class="form-control" ng-model="vm.food" placeholder="Enter food"/>
+    </div>
+    <p>Sriracha sauce is great with {{vm.food}}!</p>
+</form>
+<script src='@Scripts.Url("~/bundles/angular")' async> </script>
+</body>
+</html>
